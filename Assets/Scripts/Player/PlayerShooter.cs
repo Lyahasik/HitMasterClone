@@ -1,13 +1,20 @@
 using UnityEngine;
+    
+using Environment;
 
 namespace Player
 {
     public class PlayerShooter : MonoBehaviour
     {
-        [SerializeField] private GameObject prefabBullet;
         [SerializeField] private GameObject shotPoint;
-        
-        private Vector3 shotDirection;
+
+        private BulletsPool _bulletsPool;
+
+        private void Start()
+        {
+            _bulletsPool = FindObjectOfType<BulletsPool>();
+        }
+
         private void Update()
         {
             if (GoalManager.IsAttackMode()
@@ -22,8 +29,20 @@ namespace Player
             
             if (Physics.Raycast(ray, out hit, 100))
             {
-                GameObject gameObject = Instantiate(prefabBullet, shotPoint.transform.position, Quaternion.identity);
-                gameObject.transform.LookAt(hit.point);
+                SpawnBullet(hit.point);
+            }
+        }
+
+        private void SpawnBullet(Vector3 targetPosition)
+        {
+            GameObject bullet = _bulletsPool.TryGetBullet();
+
+            if (bullet != null)
+            {
+                bullet.transform.parent = null;
+                bullet.transform.position = shotPoint.transform.position;
+                bullet.transform.LookAt(targetPosition);
+                bullet.GetComponent<BulletFlight>().StartMoving();
             }
         }
     }

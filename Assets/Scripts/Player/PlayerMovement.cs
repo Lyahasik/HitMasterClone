@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,20 +9,30 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         private GoalManager _goalManager;
-        private Camera _camera;
 
         private NavMeshAgent _navMeshAgent;
         
         private GameObject _currentWaypoint;
+
+        private bool _isMoving;
+
+        private void OnEnable()
+        {
+            GoalManager.OnStartWorkingGoals += StartWorkingGoals;
+        }
 
         private void Start()
         {
             StartCoroutine(TakeStartingPosition());
             
             _goalManager = FindObjectOfType<GoalManager>();
-            _camera = Camera.main;
             
             _navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+        
+        private void StartWorkingGoals()
+        {
+            _isMoving = true;
         }
 
         private IEnumerator TakeStartingPosition()
@@ -38,6 +49,9 @@ namespace Player
 
         private void Update()
         {
+            if (!_isMoving)
+                return;
+            
             CheckPointReached();
             MoveNextWaypoint();
         }

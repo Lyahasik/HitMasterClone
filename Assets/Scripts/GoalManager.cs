@@ -4,9 +4,22 @@ using UnityEngine.SceneManagement;
 
 public class GoalManager : MonoBehaviour
 {
+    public static Action OnStartWorkingGoals;
+    
     public GameObject[] _waypoints;
 
     private int _currentWaypointId;
+    
+    private static bool _isProgressed;
+
+    public static void StartWorkingGoals()
+    {
+        if (_isProgressed)
+            return;
+
+        _isProgressed = true;
+        OnStartWorkingGoals?.Invoke();
+    }
 
     private void Update()
     {
@@ -25,14 +38,21 @@ public class GoalManager : MonoBehaviour
     {
         if (_currentWaypointId >= _waypoints.Length)
         {
+            ResetValues();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             return null;
         }
 
-        Debug.Log(_currentWaypointId);
         GameObject waypoint = _waypoints[_currentWaypointId];
         _currentWaypointId++;
         
         return waypoint;
+    }
+
+    private void ResetValues()
+    {
+        _isProgressed = false;
+        
+        OnStartWorkingGoals = null;
     }
 }

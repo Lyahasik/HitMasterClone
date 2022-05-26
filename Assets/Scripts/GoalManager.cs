@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 public class GoalManager : MonoBehaviour
 {
     public static Action OnStartWorkingGoals;
-    
-    public GameObject[] _waypoints;
-
-    private int _currentWaypointId;
+    public static Action OnTargetAreaCleared;
     
     private static bool _isProgressed;
-
+    
+    public GameObject[] _waypoints;
+    private int _currentWaypointId;
+    
     public static void StartWorkingGoals()
     {
         if (_isProgressed)
@@ -19,6 +19,11 @@ public class GoalManager : MonoBehaviour
 
         _isProgressed = true;
         OnStartWorkingGoals?.Invoke();
+    }
+    
+    public static void TargetAreaCleared()
+    {
+        OnTargetAreaCleared?.Invoke();
     }
 
     private void Update()
@@ -33,26 +38,28 @@ public class GoalManager : MonoBehaviour
             Debug.DrawLine(_waypoints[i - 1].transform.position, _waypoints[i].transform.position);
         }
     }
-
-    public GameObject TryGetNextWaypoint()
+    
+    public void PlayerReachedPoint()
     {
+        _currentWaypointId++;
+        
         if (_currentWaypointId >= _waypoints.Length)
         {
             ResetValues();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            return null;
         }
-
-        GameObject waypoint = _waypoints[_currentWaypointId];
-        _currentWaypointId++;
-        
-        return waypoint;
     }
 
-    private void ResetValues()
+    public GameObject GetNextWaypoint()
+    {
+        return _waypoints[_currentWaypointId];
+    }
+
+    private static void ResetValues()
     {
         _isProgressed = false;
         
         OnStartWorkingGoals = null;
+        OnTargetAreaCleared = null;
     }
 }

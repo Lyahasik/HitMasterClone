@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class StartText : MonoBehaviour
+namespace UI
 {
-    private void OnEnable()
+    public class StartText : MonoBehaviour
     {
-        GoalManager.OnStartWorkingGoals += StartWorkingGoals;
-    }
-    
-    private void OnDisable()
-    {
-        GoalManager.OnStartWorkingGoals -= StartWorkingGoals;
-    }
+        private void OnEnable()
+        {
+            GoalManager.OnStartWorkingGoals += StartWorkingGoals;
+        }
 
-    private void StartWorkingGoals()
-    {
-        Destroy(gameObject);
+        private void OnDisable()
+        {
+            GoalManager.OnStartWorkingGoals -= StartWorkingGoals;
+        }
+
+        private void StartWorkingGoals()
+        {
+            Destroy(gameObject);
+        }
     }
 }

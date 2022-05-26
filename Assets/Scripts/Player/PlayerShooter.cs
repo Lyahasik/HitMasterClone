@@ -1,14 +1,17 @@
 using UnityEngine;
 
-using Enemy;
-
 namespace Player
 {
     public class PlayerShooter : MonoBehaviour
     {
+        [SerializeField] private GameObject prefabBullet;
+        [SerializeField] private GameObject shotPoint;
+        
+        private Vector3 shotDirection;
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (GoalManager.IsAttackMode()
+                && Input.GetKeyDown(KeyCode.Mouse0))
                 Shot();
         }
 
@@ -16,13 +19,11 @@ namespace Player
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-
+            
             if (Physics.Raycast(ray, out hit, 100))
             {
-                LifeEnemy lifeEnemy = hit.collider.GetComponent<LifeEnemy>();
-                
-                if (lifeEnemy)
-                    lifeEnemy.Killed();
+                GameObject gameObject = Instantiate(prefabBullet, shotPoint.transform.position, Quaternion.identity);
+                gameObject.transform.LookAt(hit.point);
             }
         }
     }

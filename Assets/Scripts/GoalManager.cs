@@ -7,18 +7,24 @@ public class GoalManager : MonoBehaviour
     public static Action OnStartWorkingGoals;
     public static Action OnTargetAreaCleared;
     
-    private static bool _isProgressed;
+    private static bool _isProgressedGame;
+    private static bool _isAttackMode;
     
     public GameObject[] _waypoints;
     private int _currentWaypointId;
     
     public static void StartWorkingGoals()
     {
-        if (_isProgressed)
+        if (_isProgressedGame)
             return;
 
-        _isProgressed = true;
+        _isProgressedGame = true;
         OnStartWorkingGoals?.Invoke();
+    }
+
+    public static bool IsAttackMode()
+    {
+        return _isAttackMode;
     }
     
     public static void TargetAreaCleared()
@@ -41,6 +47,7 @@ public class GoalManager : MonoBehaviour
     
     public void PlayerReachedPoint()
     {
+        _isAttackMode = true;
         _currentWaypointId++;
         
         if (_currentWaypointId >= _waypoints.Length)
@@ -52,12 +59,13 @@ public class GoalManager : MonoBehaviour
 
     public GameObject GetNextWaypoint()
     {
+        _isAttackMode = false;
         return _waypoints[_currentWaypointId];
     }
 
     private static void ResetValues()
     {
-        _isProgressed = false;
+        _isProgressedGame = false;
         
         OnStartWorkingGoals = null;
         OnTargetAreaCleared = null;

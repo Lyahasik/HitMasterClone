@@ -30,7 +30,7 @@ namespace Environment
             LifeEnemy lifeEnemy = other.GetComponent<LifeEnemy>();
             
             if (lifeEnemy)
-                lifeEnemy.Killed();
+                lifeEnemy.TakeDamage();
 
             AddToPool();
         }

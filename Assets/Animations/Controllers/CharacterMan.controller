@@ -10,8 +10,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -6057118178698924597}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_State: {fileID: -4405577653929116105}
+    m_Position: {x: 310, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -21,15 +21,15 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -6057118178698924597}
---- !u!1102 &-6057118178698924597
+  m_DefaultState: {fileID: -4405577653929116105}
+--- !u!1102 &-4405577653929116105
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: IdleEnemy
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -42,7 +42,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: e6bf3f4d712abe544833725e043e9452, type: 3}
+  m_Motion: {fileID: 7400000, guid: 5f3f1388b7aaeae4dad7f320a83d5531, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

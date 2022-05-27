@@ -324,6 +324,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2037834413}
     m_Modifications:
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -395,6 +403,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2037834413}
     m_Modifications:
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -599,6 +615,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 32c802ad622fb614b8026e486fd0bda9, type: 2}
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -784,6 +808,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 793925785}
     m_Modifications:
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -1859,6 +1891,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 793925785}
     m_Modifications:
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -2299,6 +2339,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 388056283}
     m_Modifications:
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -2360,6 +2408,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2037834413}
     m_Modifications:
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -2997,6 +3053,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 793925785}
     m_Modifications:
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -3154,6 +3218,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2037834413}
     m_Modifications:
+    - target: {fileID: 1792085376243877858, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953192347521997738, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5043894998422212080, guid: 7a9a22016b1e70d4c8c56b8e7aed9697, type: 3}
       propertyPath: m_WarningMessage
       value: 

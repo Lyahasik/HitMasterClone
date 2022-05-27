@@ -10,6 +10,7 @@ namespace Player
         private GoalManager _goalManager;
 
         private NavMeshAgent _navMeshAgent;
+        private Animator _animator;
         
         private GameObject _currentWaypoint;
 
@@ -28,11 +29,13 @@ namespace Player
             _goalManager = FindObjectOfType<GoalManager>();
             
             _navMeshAgent = GetComponent<NavMeshAgent>();
+            _animator = GetComponent<Animator>();
         }
         
         private void TargetAreaCleared()
         {
             _isMoving = true;
+            _animator.SetBool("Moving", true);
             _currentWaypoint = _goalManager.GetNextWaypoint();
         }
 
@@ -66,6 +69,7 @@ namespace Player
                 if (distanceToWaypoint < _navMeshAgent.stoppingDistance)
                 {
                     _isMoving = false;
+                    _animator.SetBool("Moving", false);
                     _currentWaypoint = null;
                     _goalManager.PlayerReachedPoint();
                 }
